@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script defer src="bundle.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    
+    <ul id="menu">
+        <li>Home</li>
+    </ul>
+
+    <button onclick="addListItem()"> Generate List Item</button>  <!-- calls the function of adding the list item - ONCLIC IT WILL CALL IT DAMNNNN-->
+
+    <script>
+        document.addEventListener("mouseover", e => console.log(e).textContent)
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Hello Aaftab!"
+        }
+
+        function addListItem(){
+        const menu = document.querySelector('#menu'); // specify where menu is
+        let li = document.createElement("li"); // prepping the argument for the append child so you can add a list
+        li.textContent = 'YOU CALLED THE FUNCTION Y??'; // the list content that will be created will have text of products instead of inner html?
+        menu.appendChild(li); // added an item to unordered list
+        }
+        // dont wont to actually use it - have to mock it -
+ 
+    </script>
+</body>
+</html>

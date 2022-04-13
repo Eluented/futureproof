@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>where is the iss now?</h1> <!--use async await - hard to get data or do actions in proper procedure. you want one thing to happen before something else happens in ORDER-->
+    <label>longitutde</label> <!--javascript has promise - have promise - function will load as promise and this will happen and that - got fiddly so they replaced it with ASYNC await -->
+    <h3 id="lon"></h3>
+    <label>latitude</label>
+    <h3 id="lat"></h3>
+    <label>altitude</label>
+    <h4 id="alt"></h4>
+
+    <script> // capture the data and get two bits of data from the API LETS GOOO - api data has to come FIRST before everything - 
+        const api_url = "https://api.wheretheiss.at/v1/satellites/25544"
+
+        async function getISS(){  // get the ISS data by using fetch - it is a method it does it for you - fetches the api url 
+            const response = await fetch(api_url); // await makes it go in order (PROMISE CHAIN) - fetches data
+            const data = await response.json(); // response catches the data 
+            
+            // console.log(data.longitude)  data.longitude is longgg so javascript has a deconstruction = const(latitude, longitude) = takes out longitude and latitude FROM THE DATA
+            const{latitude,longitude, altitude} = data;
+
+            document.getElementById("lon").textContent = longitude;
+            document.getElementById("lat").textContent = latitude; // can use timeout so javascript can refresh on its own god damnnn bruh
+            document.getElementById("alt").textContent = altitude;
+            // we have to test api now we have to 
+        }
+        getISS();
+    </script>
+
+</body>
+</html>
