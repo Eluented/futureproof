@@ -6,7 +6,7 @@ Hello! Welcome to _Onur's_ Lap 3 Debug Assignment! Thanks **Dan** for for poppin
 * ```npm run dev``` - now fire it up! 
 
 ## changeLog 	:smiling_imp:
-Below are my _magnificent_ , **ground-breaking** changes
+Below are my _magnificent_ , *ground-breaking* changes
 * 
 
 ## InitialBugs (ew) :bug: :vomiting_face:
