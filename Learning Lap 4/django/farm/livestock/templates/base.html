@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'livestock/default.css' %}"/>
+    <title>Farm</title>
+    {% block headers %}
+    
+    {% endblock headers %}
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'livestock-index' %}">Home</a></li>
+                <li><a href="{% url 'livestock-about' %}">About</a></li>
+                <li><a href="{% url 'livestock-cows' %}">Cows</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock content%}
+    </main>
+</body>
+</html>
